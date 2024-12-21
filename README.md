@@ -11,9 +11,8 @@ You can clone this repository and add directories named `FigureTable`, `data`, a
 ### Stata Version
 
 Tested and confirmed working on:
-
-macOS: Stata/SE 18.0
-Windows: Stata/MP 18.0
+- macOS: Stata/SE 18.0
+- Windows: Stata/MP 18.0
 
 Note: Earlier versions of Stata may work but are not tested.
 
@@ -83,8 +82,15 @@ The repository contains the following directories and do-files:
 └── wrapper.do
 ```
 
-## Execution
+## Replication Instructions
 
+1. Clone the appropriate branch based on which paper version you want to replicate
+2. Create the required directories: `FigureTable`, `data`, and `log`
+3. Add the required datasets from WRDS to the `data` directory
+4. Run the wrapper script:
+```stata
+do wrapper.do
+```
 A wrapper (`wrapper.do`) will run all the do-files and generate data, and then create figures and tables as below:
 
 - `crsp_permno.dta`
